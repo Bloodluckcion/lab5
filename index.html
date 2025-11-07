@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио с JavaScript</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">Моё Портфолио</a>
+                <ul class="nav-menu">
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="hero">
+            <div class="container">
+                <h1>Добро пожаловать в моё портфолио</h1>
+                <p>Разрабатываю современные и адаптивные веб-приложения, а так же мини игры</p>
+                <button class="cta-button" id="themeToggle">Сменить тему</button>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Мои навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">React</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Мои работы</h2>
+                
+                <!-- Фильтры галереи -->
+                <div class="filters">
+                    <button class="filter-btn active" data-category="all">Все</button>
+                    <button class="filter-btn" data-category="League of Legends">League of Legends</button>
+                    <button class="filter-btn" data-category="Oazis">Оазис</button>
+                    <button class="filter-btn" data-category="tech">Технологии</button>
+                </div>
+
+                <!-- Галерея -->
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="League of Legends">
+                        <img src="images/League of Legends1.jpg" alt="League of Legends 1">
+                    </div>
+                    <div class="gallery-item" data-category="Oazis">
+                        <img src="images/Oazis1.jpg" alt="Оазис 1">
+                    </div>
+                    <div class="gallery-item" data-category="tech">
+                        <img src="images/tech1.jpg" alt="Технологии 1">
+                    </div>
+                    <div class="gallery-item" data-category="League of Legends">
+                        <img src="images/League of Legends2.jpg" alt="League of Legends 2">
+                    </div>
+                    <div class="gallery-item" data-category="Oazis">
+                        <img src="images/Oazis2.jpg" alt="Оазис 2">
+                    </div>
+                    <div class="gallery-item" data-category="tech">
+                        <img src="images/tech2.jpg" alt="Технологии 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Часто задаваемые вопросы</h2>
+                
+                <!-- Аккордеон -->
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Сколько времени занимает разработка проекта?</h3>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Время разработки зависит от сложности проекта. Простой лендинг - до 1ой недели, сложное веб-приложение - 1-2 месяца.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Какие технологии вы используете?</h3>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>HTML, CSS, JavaScript, React, Node.js, и другие современные технологии.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Предоставляете ли вы поддержку после запуска проекта?</h3>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Нет. Ещё не дорос до такого уровня😂</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025. Моё Портфолио. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
